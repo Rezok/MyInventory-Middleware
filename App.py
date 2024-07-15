@@ -1,4 +1,5 @@
 from Model.MainModel import MainModel
+from Utilities.AmConfig import AmConfig
 from View.MainView import MainView
 from Controller.MainController import MainController
 
@@ -13,8 +14,12 @@ from Controller.MainController import MainController
 
 
 def main():
+    amconfig = AmConfig()
+    amconfig.read_config_file()
+
     main_view = MainView()
     main_model = MainModel()
+
     main_controller = MainController(main_model, main_view)
     main_controller.start()
 
