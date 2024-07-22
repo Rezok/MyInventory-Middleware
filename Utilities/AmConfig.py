@@ -15,9 +15,11 @@ class AmConfig:
     _instance = None
 
     def __init__(self):
-        self.config = configparser.ConfigParser()
-        self.config_path = f"{os.environ.get('APPDATA')}\\MyInventory Middleware"
-        os.makedirs(self.config_path, exist_ok=True)
+        if not hasattr(self, 'initialized'):
+            self.config = configparser.ConfigParser()
+            self.config_path = f"{os.environ.get('APPDATA')}\\MyInventory Middleware"
+            os.makedirs(self.config_path, exist_ok=True)
+            self.initialized = True
 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
