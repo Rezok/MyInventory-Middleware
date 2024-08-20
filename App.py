@@ -4,13 +4,13 @@ from View.MainView import MainView
 from Controller.MainController import MainController
 
 """
-        CURRENT_VERSION: 1.0
-        AUTHOR: Jakub Pankiewicz
-        DESCRIPTION: This is the main application class
+    CURRENT_VERSION: 1.0
+    AUTHOR: Jakub Pankiewicz
+    DESCRIPTION: This is the main application class
 
-        **CHANGELOG**
-        12.07.2024 |1.0| - Create App python file
-    """
+    **CHANGELOG**
+    12.07.2024 |1.0| - Create App python file
+"""
 
 
 def main():
@@ -26,4 +26,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
